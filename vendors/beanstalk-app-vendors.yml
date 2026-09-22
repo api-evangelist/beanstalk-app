@@ -1,0 +1,43 @@
+generated: '2026-09-22'
+method: probed
+source: pre-flight dossier (docs platform, portal detections) + CNAME chains and response headers of the hosts apis.yml names
+registry: all/0-working/vendors.yml
+areas_vocabulary:
+- documentation
+- developer-portal
+- api-gateway
+- cdn
+- hosting
+- sdk-generation
+- api-collections
+- status-page
+- support
+- community
+- identity
+- mcp-hosting
+vendors:
+- vendor: netlify
+  name: Netlify
+  area: hosting
+  host: beanstalkapp.com
+  evidence: header:x-nf-request-id
+  signal: header
+  confidence: high
+  kin_score: []
+- vendor: helpscout
+  name: Help Scout
+  area: support
+  host: support.beanstalkapp.com
+  evidence: cname:helpscoutdocs.com
+  signal: cname
+  confidence: high
+  kin_score:
+  - support_channel
+checked:
+- 'docs-platform: no-docs-host'
+- status.beanstalkapp.com (StatusPage)
+- beanstalkapp.com (Website)
+- guides.beanstalkapp.com (Documentation)
+- api.beanstalkapp.com (APIReference)
+- support.beanstalkapp.com (Support)
+- signup.beanstalkapp.com (SignUp)

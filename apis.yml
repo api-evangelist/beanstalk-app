@@ -1,23 +1,100 @@
 aid: beanstalk-app
+
 name: Beanstalk
-description: 'Beanstalk is a company surfaced via the API Evangelist harvest backlog (source: version-control)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://beanstalkapp.com/images/apple-touch-icon-144x144-precomposed.png
+
+description: Beanstalk provides a complete workflow platform for writing, reviewing, and deploying code, supporting both Git and SVN repositories.
+  It offers features like branch management, code reviews, permissions, notifications, and integrations, serving over 70,000 companies worldwide.
+  The service includes pricing plans, support resources, and a status page for operational transparency.
+
 url: https://raw.githubusercontent.com/api-evangelist/beanstalk-app/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:version-control
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-22 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-22'
+
 modified: '2026-09-22'
+
 tags:
 - Company
-apis: []
+- DevOps
+- CodeHosting
+- CI/CD
+- Collaboration
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: SecurityTxt
+  url: well-known/beanstalk-app-status-security.txt
+- type: Plans
+  url: plans/beanstalk-app-plans-pricing.yml
+- type: SecurityTxt
+  url: well-known/beanstalk-app-blog-security.txt
+- type: WellKnown
+  url: well-known/beanstalk-app-well-known.yml
+- type: Vendors
+  url: vendors/beanstalk-app-vendors.yml
+- type: SDKs
+  url: packages/beanstalk-app-packages.yml
+- type: Packages
+  url: packages/beanstalk-app-packages.yml
+- type: StatusPage
+  url: https://status.beanstalkapp.com
+- type: Security
+  url: https://beanstalkapp.com/Security
+- type: DomainSecurity
+  url: security/beanstalk-app-domain-security.yml
 - type: Website
   url: https://beanstalkapp.com/
+- type: Documentation
+  url: https://guides.beanstalkapp.com/
+- type: APIReference
+  url: https://api.beanstalkapp.com/
+- type: Support
+  url: https://support.beanstalkapp.com/
+- type: Blog
+  url: https://blog.beanstalkapp.com/
+- type: Pricing
+  url: https://beanstalkapp.com/pricing
+- type: SignUp
+  url: https://signup.beanstalkapp.com/
+- type: TermsOfService
+  url: https://beanstalkapp.com/terms-of-service
+
+apis:
+- name: Beanstalk API
+  description: Beanstalk API provides endpoints for repository management, deployments, and collaboration features as described in the developer
+    guides.
+  humanURL: https://guides.beanstalkapp.com/
+  baseURL: null
+  aid: beanstalk-app:beanstalk-api
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: API reference at https://api.beanstalkapp.com/ returns 404 for common OpenAPI paths, and no machine‑readable spec is published.
+  evidence:
+  - url: https://api.beanstalkapp.com/openapi.json
+    status: 404
+  - url: https://api.beanstalkapp.com/openapi.yaml
+    status: 404
+  checked: 2026-09-22
+x-enrichment:
+  date: '2026-09-22'
+  status: enriched
+  artifacts_added: 7
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local

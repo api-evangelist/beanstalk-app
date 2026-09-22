@@ -1,0 +1,55 @@
+generated: 2026-09-22
+method: searched
+source: https://beanstalkapp.com/pricing
+audience: developer-api
+pricing_basis: tiered-subscription
+published: true
+name: Beanstalk
+type: Pricing
+plans:
+  - name: Free
+    description: "Free for the first two weeks"
+    price_text: "Free for the first two weeks"
+    price: 0
+    limits:
+      - "2 weeks free trial"
+  - name: Bronze
+    price_text: "$15 /month"
+    price: 15
+    limits:
+      - "3 GB of storage"
+      - "10 repositories"
+      - "5 users"
+      - "3 servers per repository"
+  - name: Silver
+    price_text: "$25 /month"
+    price: 25
+    limits:
+      - "6 GB of storage"
+      - "25 repositories"
+      - "20 users"
+      - "5 servers per repository"
+  - name: Gold
+    price_text: "$50 /month"
+    price: 50
+    limits:
+      - "12 GB of storage"
+      - "50 repositories"
+      - "40 users"
+      - "10 servers per repository"
+  - name: Platinum
+    price_text: "$100 /month"
+    price: 100
+    limits:
+      - "24 GB of storage"
+      - "120 repositories"
+      - "100 users"
+      - "20 servers per repository"
+  - name: Diamond
+    price_text: "$200 /month"
+    price: 200
+    limits:
+      - "60 GB of storage"
+      - "300 repositories"
+      - "200 users"
+      - "40 servers per repository"
